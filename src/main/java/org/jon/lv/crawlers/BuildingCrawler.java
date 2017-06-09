@@ -54,7 +54,7 @@ public class BuildingCrawler extends BaseSeimiCrawler {
 //            System.out.println(itemBody);
             //拿到下一页的地址后缀
             String nextPage = null;
-//            nextPage = StringUtils.join(document.sel("//div[@class='pagination']/a[text()*='下一页']/@href"), "###");
+            nextPage = StringUtils.join(document.sel("//div[@class='pagination']/a[text()*='下一页']/@href"), "###");
             if (StringUtils.isNotEmpty(nextPage)) {
                 //用这一个回调函数就够了
                 Request req = Request.build(nextPage, "start");
